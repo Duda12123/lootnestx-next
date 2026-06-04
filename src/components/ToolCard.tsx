@@ -1,15 +1,12 @@
 import Link from "next/link"
 import { tools } from "@/data/tools"
-import { motion } from "framer-motion"
 
 export function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }) {
   if (tool.comingSoon) {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, delay: index * 0.04 }}
-        className="group relative rounded-xl border border-dashed border-card-border bg-card-bg/50 p-5 transition-all"
+      <div
+        className="group relative rounded-xl border border-dashed border-card-border bg-card-bg/50 p-5 transition-all animate-in"
+        style={{ animationDelay: `${index * 0.04}s` }}
       >
         <div className="flex items-start gap-4">
           <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-card-bg text-2xl opacity-60">{tool.icon}</span>
@@ -19,15 +16,14 @@ export function ToolCard({ tool, index }: { tool: typeof tools[number]; index: n
           </div>
         </div>
         <span className="absolute right-3 top-3 rounded-full bg-accent-soft px-2 py-0.5 text-[10px] font-semibold text-accent uppercase tracking-wide">Soon</span>
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, delay: index * 0.04 }}
+    <div
+      className="animate-in"
+      style={{ animationDelay: `${index * 0.04}s` }}
     >
       <Link
         href={`/tool/${tool.slug}`}
@@ -49,6 +45,6 @@ export function ToolCard({ tool, index }: { tool: typeof tools[number]; index: n
 
         <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/5 transition-all group-hover:ring-accent/20" />
       </Link>
-    </motion.div>
+    </div>
   )
 }

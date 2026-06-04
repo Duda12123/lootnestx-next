@@ -1,8 +1,7 @@
 "use client"
 
-import { useState, useMemo, useEffect, useCallback, Suspense } from "react"
+import { useState, useMemo, useCallback, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { motion } from "framer-motion"
 import { Search, Sparkles, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { tools, categories } from "@/data/tools"
@@ -13,9 +12,7 @@ function HomePage() {
   const router = useRouter()
   const activeCategory = searchParams.get("cat") || "all"
   const [query, setQuery] = useState("")
-  const [mounted, setMounted] = useState(false)
 
-  useEffect(() => { setMounted(true) }, [])
 
   const setCategory = useCallback((cat: string) => {
     const params = new URLSearchParams(searchParams.toString())
@@ -43,12 +40,7 @@ function HomePage() {
         <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-accent/3 blur-[120px]" />
 
         <div className="relative mx-auto max-w-4xl px-4 pb-16 pt-20 sm:pb-20 sm:pt-28 lg:pt-32">
-          <motion.div
-            initial={mounted ? { opacity: 0, y: 12 } : false}
-            animate={mounted ? { opacity: 1, y: 0 } : false}
-            transition={{ duration: 0.5 }}
-            className="text-center"
-          >
+          <div className="text-center animate-in">
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/15 bg-accent-soft px-4 py-1.5 text-sm font-medium text-accent">
               <Sparkles size={16} />
               {tools.length} free tools — no sign-up required
@@ -86,7 +78,7 @@ function HomePage() {
                 </Link>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
