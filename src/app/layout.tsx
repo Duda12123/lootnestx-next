@@ -3,6 +3,7 @@ import { Space_Grotesk, DM_Sans, JetBrains_Mono } from "next/font/google"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { AddToHomeScreen } from "@/components/AddToHomeScreen"
+import { ErrorBoundary } from "@/components/ErrorBoundary"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading" })
@@ -61,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-background text-foreground font-sans antialiased">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1"><ErrorBoundary>{children}</ErrorBoundary></main>
         <Footer />
         <AddToHomeScreen />
       </body>
