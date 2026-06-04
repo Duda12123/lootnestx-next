@@ -1,0 +1,16 @@
+{
+  "name": "ToolNest - Free Online Tools",
+  "short_name": "ToolNest",
+  "description": "Free online tools that work in your browser. No sign-ups, no uploads.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#3b82f6",
+  "orientation": "any",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "48x48", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["utilities", "developer tools", "productivity"]
+}

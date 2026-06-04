@@ -1,0 +1,25 @@
+"use client";
+import { Eye } from "lucide-react"
+
+export default function OcrTool() {
+  return (
+    <div className="mx-auto max-w-xl px-4">
+      <h1 className="text-2xl font-bold tracking-tight mb-2">OCR Text Extractor</h1>
+      <p className="text-muted mb-6">Extract text from images using browser-based OCR (Tesseract WASM).</p>
+
+      <div className="rounded-2xl border border-card-border bg-card-bg p-6">
+        <div className="rounded-xl border border-dashed border-card-border p-12 text-center">
+          <Eye size={48} className="mx-auto text-muted/40 mb-4" />
+          <h3 className="text-lg font-semibold mb-2">Coming Soon</h3>
+          <p className="text-sm text-muted max-w-md mx-auto">
+            This tool requires Tesseract.js WASM (~8MB download). We're optimizing the initial load to keep the experience smooth.
+          </p>
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-warning/20 bg-warning/10 px-4 py-2">
+            <span className="h-2 w-2 rounded-full bg-warning animate-pulse" />
+            <span className="text-sm font-medium text-warning">Available in next update</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
