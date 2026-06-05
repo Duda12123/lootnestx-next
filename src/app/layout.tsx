@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next"
 import { Space_Grotesk, DM_Sans, JetBrains_Mono } from "next/font/google"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { AddToHomeScreen } from "@/components/AddToHomeScreen"
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration"
 import { ErrorBoundary } from "@/components/ErrorBoundary"
 import "./globals.css"
@@ -66,7 +65,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1"><ErrorBoundary>{children}</ErrorBoundary></main>
         <Footer />
         <ServiceWorkerRegistration />
-        <AddToHomeScreen />
       </body>
     </html>
   )

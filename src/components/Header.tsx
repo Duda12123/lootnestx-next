@@ -4,6 +4,7 @@ import { useState, useCallback } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { AddToHomeScreen } from "./AddToHomeScreen"
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -34,9 +35,12 @@ export function Header() {
           ))}
         </nav>
 
-        <button onClick={() => setMenuOpen(!menuOpen)} className="rounded-lg p-2 text-muted hover:bg-card-bg transition-colors md:hidden" aria-label="Toggle menu">
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <AddToHomeScreen />
+          <button onClick={() => setMenuOpen(!menuOpen)} className="rounded-lg p-2 text-muted hover:bg-card-bg transition-colors md:hidden" aria-label="Toggle menu">
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
