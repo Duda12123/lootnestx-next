@@ -1,6 +1,6 @@
 {
-  "name": "ToolNest - Free Online Tools",
-  "short_name": "ToolNest",
+  "name": "ToolNestX - Free Online Tools",
+  "short_name": "ToolNestX",
   "description": "Free online tools that work in your browser. No sign-ups, no uploads.",
   "start_url": "/",
   "display": "standalone",

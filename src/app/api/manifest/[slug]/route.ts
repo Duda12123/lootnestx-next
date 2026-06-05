@@ -14,7 +14,7 @@ export async function GET(_req: Request, { params }: Params) {
   }
 
   const manifest = {
-    name: `${tool.name} — ToolNest`,
+    name: `${tool.name} — ToolNestX`,
     short_name: tool.name,
     description: tool.description,
     start_url: `/tool/${slug}`,

@@ -4,6 +4,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration"
 import { ErrorBoundary } from "@/components/ErrorBoundary"
+import { JsonLd } from "@/components/JsonLd"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading" })
@@ -18,20 +19,23 @@ export const metadata: Metadata = {
   description:
     "Free online tools that work right in your browser. Calculators, converters, formatters, image tools, and more — no sign-ups, no uploads, no nonsense.",
   keywords: [
-    "online tools", "free tools", "calculator", "json formatter", "base64",
-    "qr code", "image compressor", "password generator", "markdown",
-    "css gradient", "unit converter", "developer tools",
+    "free online tools", "calculator", "json formatter", "base64 encoder",
+    "qr code generator", "image compressor", "password generator", "markdown preview",
+    "css gradient", "unit converter", "developer tools", "meme generator",
+    "youtube thumbnail", "logo generator", "gaming name generator", "screen recorder",
+    "mortgage calculator", "sales tax calculator", "bmi calculator", "color picker",
+    "text tools", "image tools", "encoding tools", "productivity tools",
   ],
   authors: [{ name: "ToolNestX" }],
   creator: "ToolNestX",
-  metadataBase: new URL("https://lootnestx.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lootnestx-next.vercel.app"),
   openGraph: {
     type: "website",
     siteName: "ToolNestX",
     title: "ToolNestX — Free Online Tools",
     description:
       "Free online tools that work right in your browser. No sign-ups, no uploads, no nonsense.",
-    url: "https://lootnestx.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://lootnestx-next.vercel.app",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
@@ -41,7 +45,7 @@ export const metadata: Metadata = {
       "Free online tools that work right in your browser. No sign-ups, no uploads, no nonsense.",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://lootnestx.com" },
+  alternates: { canonical: "/" },
   manifest: "/manifest.json",
 }
 
@@ -61,6 +65,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className="min-h-screen bg-background text-foreground font-sans antialiased">
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "ToolNestX",
+          "url": process.env.NEXT_PUBLIC_SITE_URL || "https://lootnestx-next.vercel.app",
+          "description": "Free online tools that work right in your browser. No sign-ups, no uploads.",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "browserRequirements": "Requires JavaScript"
+        }} />
         <Header />
         <main className="flex-1"><ErrorBoundary>{children}</ErrorBoundary></main>
         <Footer />

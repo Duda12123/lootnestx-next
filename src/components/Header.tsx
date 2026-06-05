@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/tool/qrcode", label: "QR Code" },
   { href: "/tool/image-compressor", label: "Image" },
   { href: "/tool/password", label: "Generate" },
+  { href: "/guides", label: "Guides" },
 ] as const
 
 export function Header() {
@@ -22,7 +23,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-card-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight shrink-0">
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight shrink-0" translate="no">
           <span className="flex h-8 w-9 items-center justify-center rounded-lg bg-accent text-sm font-black text-white shadow-sm shadow-accent/25 tracking-[-0.1em]">TX</span>
           <span className="hidden sm:inline">ToolNest<span className="text-accent">X</span></span>
         </Link>

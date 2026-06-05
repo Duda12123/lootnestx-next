@@ -47,6 +47,8 @@ export function Footer() {
           <div className="space-y-3">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-soft">About</h3>
             <ul className="space-y-2">
+              <li><Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">About Us</Link></li>
+              <li><Link href="/guides" className="text-sm text-muted hover:text-foreground transition-colors">Guides</Link></li>
               <li><Link href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-sm text-muted hover:text-foreground transition-colors">Terms of Service</Link></li>
               <li><Link href="/contact" className="text-sm text-muted hover:text-foreground transition-colors">Contact</Link></li>
@@ -55,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-card-border pt-8">
-          <p className="text-center text-xs text-muted-soft">&copy; {new Date().getFullYear()} ToolNestX. All tools run locally in your browser — your data never leaves your device.</p>
+          <p className="text-center text-xs text-muted-soft"><span translate="no">&copy; {new Date().getFullYear()} ToolNestX.</span> All tools run locally in your browser — your data never leaves your device.</p>
         </div>
       </div>
     </footer>

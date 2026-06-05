@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-export const metadata: Metadata = { title: "Privacy Policy — ToolNest" }
+export const metadata: Metadata = { title: "Privacy Policy — ToolNestX" }
 
 export default function PrivacyPage() {
   return (
@@ -9,7 +9,7 @@ export default function PrivacyPage() {
       <div className="prose prose-invert prose-zinc max-w-none space-y-4 text-muted leading-relaxed">
         <p><strong>Last updated:</strong> June 2026</p>
         <h2 className="text-xl font-semibold text-foreground mt-8">1. No Data Collection</h2>
-        <p>ToolNest tools run entirely in your browser. We do not collect, store, or transmit any of your data. All processing happens locally on your device.</p>
+        <p>ToolNestX tools run entirely in your browser. We do not collect, store, or transmit any of your data. All processing happens locally on your device.</p>
         <h2 className="text-xl font-semibold text-foreground mt-8">2. No Cookies</h2>
         <p>We do not use tracking cookies or analytics. The only cookies used are functional (e.g., remembering your theme preference) and stored locally.</p>
         <h2 className="text-xl font-semibold text-foreground mt-8">3. Image & File Processing</h2>

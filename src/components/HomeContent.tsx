@@ -55,6 +55,13 @@ function HomePage() {
               Free online tools that run locally. No uploads, no accounts, no limits. Just tools that get things done — fast.
             </p>
 
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-soft leading-relaxed">
+              From calculators and converters to image editors and developer utilities, ToolNestX is your one-stop toolkit.
+              Every tool runs entirely in your browser — your data never leaves your device.
+              Whether you're a developer debugging JSON, a student calculating GPA, a designer generating color palettes,
+              or just someone who needs to compress an image, we've got you covered. No installs, no sign-ups, no paywalls.
+            </p>
+
             {/* Search */}
             <div className="mx-auto mt-8 max-w-md">
               <div className="relative">
@@ -130,6 +137,56 @@ function HomePage() {
             </button>
           </div>
         )}
+      </section>
+
+      {/* SEO content — category descriptions */}
+      <section className="border-t border-card-border">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div className="max-w-3xl space-y-12">
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight mb-3">A Complete Toolkit for Your Browser</h2>
+              <p className="text-muted leading-relaxed">
+                ToolNestX brings together over 80 free online tools in one place. Whether you&apos;re a developer
+                debugging JSON responses, a student calculating your GPA, a designer picking color palettes,
+                or someone who just needs to compress an image — every tool runs entirely in your browser.
+                No installs, no sign-ups, and nothing uploaded to any server. Your data stays on your device,
+                and all processing happens locally. That means faster performance, better privacy, and zero
+                waiting for cloud processing.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-semibold tracking-tight mb-3">Calculators for Real Life</h2>
+              <p className="text-muted leading-relaxed">
+                From mortgage payments and GPA scores to gas costs and sales tax, our calculators are built
+                with US users in mind. Calculate BMI using standard or metric units, figure out how much
+                sleep you need based on sleep cycles, or convert cooking measurements between cups, ounces,
+                and grams. Each calculator updates results instantly as you type — no submit buttons needed.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-semibold tracking-tight mb-3">Developer Tools That Just Work</h2>
+              <p className="text-muted leading-relaxed">
+                Format JSON with syntax highlighting, encode strings to Base64, validate JWT tokens, test
+                regular expressions in real-time, and minify CSS or JavaScript — all without leaving your
+                browser tab. Our developer tools are designed to be fast and distraction-free, with copy
+                buttons where you need them and clear error messages when something goes wrong.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-semibold tracking-tight mb-3">Privacy You Can Count On</h2>
+              <p className="text-muted leading-relaxed">
+                Unlike many online tool sites, ToolNestX doesn&apos;t upload your files to a remote server
+                for processing. Images stay in your browser. Text stays in your browser. Everything you
+                type, paste, or upload is processed locally using Web APIs and client-side JavaScript.
+                We don&apos;t track you with analytics, we don&apos;t serve behavior-targeted ads, and we
+                don&apos;t store any of your data. What happens in your browser stays in your browser.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   )

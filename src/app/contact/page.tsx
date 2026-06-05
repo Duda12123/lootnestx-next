@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-export const metadata: Metadata = { title: "Contact — ToolNest" }
+export const metadata: Metadata = { title: "Contact — ToolNestX" }
 
 export default function ContactPage() {
   return (
