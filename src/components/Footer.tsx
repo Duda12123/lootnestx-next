@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-3">
             <Link href="/" className="inline-flex items-center gap-2 text-lg font-bold">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-base font-black text-white">T</span>
-              ToolNest
+              <span className="flex h-8 w-9 items-center justify-center rounded-lg bg-accent text-sm font-black text-white tracking-[-0.1em]">TX</span>
+              ToolNest<span className="text-accent">X</span>
             </Link>
             <p className="text-sm text-muted leading-relaxed">Free online tools that work in your browser. No uploads to servers, no sign-ups, just tools that get things done.</p>
             <div className="flex items-center gap-3 pt-2">

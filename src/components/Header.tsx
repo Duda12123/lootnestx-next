@@ -23,8 +23,8 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-card-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight shrink-0">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-base font-black text-white shadow-sm shadow-accent/25">T</span>
-          <span className="hidden sm:inline">ToolNest</span>
+          <span className="flex h-8 w-9 items-center justify-center rounded-lg bg-accent text-sm font-black text-white shadow-sm shadow-accent/25 tracking-[-0.1em]">TX</span>
+          <span className="hidden sm:inline">ToolNest<span className="text-accent">X</span></span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

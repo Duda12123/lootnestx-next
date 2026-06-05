@@ -20,6 +20,7 @@ export const categories = [
   { id: "audio", name: "Audio & Speech" },
   { id: "dev", name: "Developer" },
   { id: "utilities", name: "Everyday Utilities" },
+  { id: "fun", name: "Fun & Games" },
 ] as const
 
 export const tools: Tool[] = [
@@ -550,6 +551,93 @@ export const tools: Tool[] = [
     category: "utilities",
     icon: "🌍",
     slug: "world-clock",
+  },
+
+  // === Fun & Games ===
+  {
+    id: "what-to-eat",
+    name: "What to Eat",
+    description: "Can't decide what to eat? Spin the wheel and let fate decide!",
+    category: "fun",
+    icon: "🍽️",
+    slug: "what-to-eat",
+    featured: true,
+  },
+  {
+    id: "random-joke",
+    name: "Random Joke",
+    description: "Fresh developer jokes and puns to brighten your day.",
+    category: "fun",
+    icon: "😂",
+    slug: "random-joke",
+  },
+  {
+    id: "truth-or-dare",
+    name: "Truth or Dare",
+    description: "Party game with multiple spicy levels. Pick your poison!",
+    category: "fun",
+    icon: "🎭",
+    slug: "truth-or-dare",
+  },
+  {
+    id: "fortune-cookie",
+    name: "Fortune Cookie",
+    description: "Crack open a virtual fortune cookie for wisdom and lucky numbers.",
+    category: "fun",
+    icon: "🥠",
+    slug: "fortune-cookie",
+  },
+
+  // === More Practical ===
+  {
+    id: "currency-converter",
+    name: "Currency Converter",
+    description: "Convert between 12 major world currencies with live-ish rates.",
+    category: "utilities",
+    icon: "💱",
+    slug: "currency-converter",
+    featured: true,
+  },
+  {
+    id: "pomodoro",
+    name: "Pomodoro Timer",
+    description: "Stay focused with the Pomodoro technique. Work smarter, not harder.",
+    category: "utilities",
+    icon: "🍅",
+    slug: "pomodoro",
+    featured: true,
+  },
+  {
+    id: "ip-lookup",
+    name: "What's My IP",
+    description: "Find your public IP address and basic network info instantly.",
+    category: "dev",
+    icon: "🌐",
+    slug: "ip-lookup",
+  },
+  {
+    id: "screen-info",
+    name: "Screen Info",
+    description: "Check your screen resolution, pixel ratio, and viewport dimensions.",
+    category: "dev",
+    icon: "🖥️",
+    slug: "screen-info",
+  },
+  {
+    id: "glassmorphism",
+    name: "Glassmorphism CSS",
+    description: "Generate beautiful glass-morphism CSS with live preview. Copy and paste!",
+    category: "css",
+    icon: "🪟",
+    slug: "glassmorphism",
+  },
+  {
+    id: "placeholder-image",
+    name: "Placeholder Image",
+    description: "Generate placeholder images for your designs. Pick sizes, colors, and ratios.",
+    category: "image",
+    icon: "🖼️",
+    slug: "placeholder-image",
   },
 ]
 

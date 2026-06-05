@@ -67,6 +67,16 @@ const toolMap: Record<string, React.ComponentType> = {
   "age-calculator": dynamic(() => import("@/tools/AgeCalculator")),
   "password-strength": dynamic(() => import("@/tools/PasswordStrength")),
   "world-clock": dynamic(() => import("@/tools/WorldClock")),
+  "what-to-eat": dynamic(() => import("@/tools/WhatToEat")),
+  "random-joke": dynamic(() => import("@/tools/RandomJoke")),
+  "truth-or-dare": dynamic(() => import("@/tools/TruthOrDare")),
+  "fortune-cookie": dynamic(() => import("@/tools/FortuneCookie")),
+  "currency-converter": dynamic(() => import("@/tools/CurrencyConverter")),
+  "pomodoro": dynamic(() => import("@/tools/PomodoroTimer")),
+  "ip-lookup": dynamic(() => import("@/tools/IpLookup")),
+  "screen-info": dynamic(() => import("@/tools/ScreenInfo")),
+  "glassmorphism": dynamic(() => import("@/tools/GlassmorphismGenerator")),
+  "placeholder-image": dynamic(() => import("@/tools/PlaceholderImage")),
 }
 
 export function getToolComponent(slug: string): React.ComponentType | null {

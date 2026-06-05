@@ -12,8 +12,8 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" }
 
 export const metadata: Metadata = {
   title: {
-    default: "ToolNest — Free Online Tools, Right in Your Browser",
-    template: "%s — ToolNest",
+    default: "ToolNestX — Free Online Tools, Right in Your Browser",
+    template: "%s — ToolNestX",
   },
   description:
     "Free online tools that work right in your browser. Calculators, converters, formatters, image tools, and more — no sign-ups, no uploads, no nonsense.",
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "qr code", "image compressor", "password generator", "markdown",
     "css gradient", "unit converter", "developer tools",
   ],
-  authors: [{ name: "ToolNest" }],
-  creator: "ToolNest",
+  authors: [{ name: "ToolNestX" }],
+  creator: "ToolNestX",
   metadataBase: new URL("https://lootnestx.com"),
   openGraph: {
     type: "website",
-    siteName: "ToolNest",
-    title: "ToolNest — Free Online Tools",
+    siteName: "ToolNestX",
+    title: "ToolNestX — Free Online Tools",
     description:
       "Free online tools that work right in your browser. No sign-ups, no uploads, no nonsense.",
     url: "https://lootnestx.com",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ToolNest — Free Online Tools",
+    title: "ToolNestX — Free Online Tools",
     description:
       "Free online tools that work right in your browser. No sign-ups, no uploads, no nonsense.",
   },
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="ToolNest" />
+        <meta name="apple-mobile-web-app-title" content="ToolNestX" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className="min-h-screen bg-background text-foreground font-sans antialiased">
