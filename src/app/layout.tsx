@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://lootnestx.com" },
+  manifest: "/manifest.json",
 }
 
 export const viewport: Viewport = {
@@ -54,7 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <head>
-        <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="ToolNest" />

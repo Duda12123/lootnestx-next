@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { tools } from "@/data/tools"
 import { ToolRenderer } from "@/components/ToolRegistry"
 import { ToolReactions } from "@/components/ToolReactions"
+import { PwaInstallButton } from "@/components/PwaInstallButton"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -25,8 +26,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://lootnestx.com/tool/${slug}`,
     },
     alternates: { canonical: `https://lootnestx.com/tool/${slug}` },
+    manifest: `/api/manifest/${slug}`,
     other: {
       "application-name": tool.name,
+      "apple-mobile-web-app-title": tool.name,
     },
   }
 }
@@ -58,9 +61,10 @@ export default async function ToolPage({ params }: Props) {
 
       {/* Tool header */}
       <div className="mb-8">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="flex items-center gap-3 mb-3 flex-wrap">
           <span className="text-3xl">{tool.icon}</span>
           <h1 className="text-2xl sm:text-3xl font-bold">{tool.name}</h1>
+          <PwaInstallButton />
         </div>
         <p className="text-muted max-w-2xl">{tool.description}</p>
       </div>
