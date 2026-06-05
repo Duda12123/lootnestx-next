@@ -4,10 +4,7 @@ import { tools } from "@/data/tools"
 export function ToolCard({ tool, index }: { tool: typeof tools[number]; index: number }) {
   if (tool.comingSoon) {
     return (
-      <div
-        className="group relative rounded-xl border border-dashed border-card-border bg-card-bg/50 p-5 transition-all animate-in"
-        style={{ animationDelay: `${index * 0.04}s` }}
-      >
+      <div className="group relative rounded-xl border border-dashed border-card-border bg-card-bg/50 p-5 transition-all">
         <div className="flex items-start gap-4">
           <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-card-bg text-2xl opacity-60">{tool.icon}</span>
           <div className="min-w-0 flex-1">
@@ -21,14 +18,10 @@ export function ToolCard({ tool, index }: { tool: typeof tools[number]; index: n
   }
 
   return (
-    <div
-      className="animate-in"
-      style={{ animationDelay: `${index * 0.04}s` }}
+    <Link
+      href={`/tool/${tool.slug}`}
+      className="tool-card group relative block rounded-xl border border-card-border bg-card-bg p-5"
     >
-      <Link
-        href={`/tool/${tool.slug}`}
-        className="tool-card group relative block rounded-xl border border-card-border bg-card-bg p-5"
-      >
         <div className="flex items-start gap-4">
           <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-2xl transition-transform group-hover:scale-110">
             {tool.icon}
@@ -44,7 +37,6 @@ export function ToolCard({ tool, index }: { tool: typeof tools[number]; index: n
         )}
 
         <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/5 transition-all group-hover:ring-accent/20" />
-      </Link>
-    </div>
+    </Link>
   )
 }
