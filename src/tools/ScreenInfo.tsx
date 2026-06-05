@@ -1,18 +1,54 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
+interface ScreenData {
+  width: number
+  height: number
+  availWidth: number
+  availHeight: number
+  colorDepth: number
+  pixelRatio: number
+  innerW: number
+  innerH: number
+}
 
 export default function ScreenInfo() {
-  const [info] = useState({
-    width: typeof window !== "undefined" ? window.screen.width : 0,
-    height: typeof window !== "undefined" ? window.screen.height : 0,
-    availWidth: typeof window !== "undefined" ? window.screen.availWidth : 0,
-    availHeight: typeof window !== "undefined" ? window.screen.availHeight : 0,
-    colorDepth: typeof window !== "undefined" ? window.screen.colorDepth : 0,
-    pixelRatio: typeof window !== "undefined" ? window.devicePixelRatio : 0,
-    innerW: typeof window !== "undefined" ? window.innerWidth : 0,
-    innerH: typeof window !== "undefined" ? window.innerHeight : 0,
+  const [info, setInfo] = useState<ScreenData>({
+    width: 0, height: 0, availWidth: 0, availHeight: 0,
+    colorDepth: 0, pixelRatio: 1, innerW: 0, innerH: 0,
   })
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setInfo({
+      width: window.screen.width,
+      height: window.screen.height,
+      availWidth: window.screen.availWidth,
+      availHeight: window.screen.availHeight,
+      colorDepth: window.screen.colorDepth,
+      pixelRatio: window.devicePixelRatio,
+      innerW: window.innerWidth,
+      innerH: window.innerHeight,
+    })
+    setLoaded(true)
+  }, [])
+
+  if (!loaded) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <div className="animate-pulse space-y-4 text-center">
+          <div className="h-16 w-48 rounded-xl bg-card-bg mx-auto" />
+          <div className="flex gap-3">
+            <div className="h-16 w-20 rounded-lg bg-card-bg" />
+            <div className="h-16 w-20 rounded-lg bg-card-bg" />
+            <div className="h-16 w-20 rounded-lg bg-card-bg" />
+            <div className="h-16 w-20 rounded-lg bg-card-bg" />
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-4">
