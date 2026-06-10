@@ -8,6 +8,20 @@ import { HomeContent } from "@/components/HomeContent"
 const featuredTools = tools.filter((t) => t.featured && !t.comingSoon)
 const activeTools = tools.filter((t) => !t.comingSoon)
 
+// Per-category color palette for visual differentiation
+const CAT_COLORS: Record<string, { bg: string; text: string; border: string }> = {
+  encode:    { bg: '#3b82f618', text: '#60a5fa', border: '#3b82f635' },
+  formatters:{ bg: '#a855f718', text: '#c084fc', border: '#a855f735' },
+  generators:{ bg: '#22c55e18', text: '#4ade80', border: '#22c55e35' },
+  css:       { bg: '#ec489918', text: '#f472b6', border: '#ec489935' },
+  image:     { bg: '#f9731618', text: '#fb923c', border: '#f9731635' },
+  text:      { bg: '#14b8a618', text: '#2dd4bf', border: '#14b8a635' },
+  dev:       { bg: '#6366f118', text: '#818cf8', border: '#6366f135' },
+  utilities: { bg: '#f59e0b18', text: '#fbbf24', border: '#f59e0b35' },
+  audio:     { bg: '#ef444418', text: '#f87171', border: '#ef444435' },
+  fun:       { bg: '#10b98118', text: '#34d399', border: '#10b98135' },
+}
+
 export default function Page() {
   return (
     <div>
@@ -15,6 +29,20 @@ export default function Page() {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-accent/3 blur-[120px]" />
+        {/* Floating tool emojis — visual anchor on mobile & desktop */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          {['🔧','🔢','📷','🔐','🎨','📝','💻','🎲','🎵','📊'].map((emoji, i) => (
+            <span
+              key={i}
+              className="absolute text-lg sm:text-xl opacity-15 sm:opacity-20"
+              style={{
+                left: `${8 + (i * 10) % 85}%`,
+                top: `${12 + (i * 7) % 70}%`,
+                animation: `fade-in-up ${1.5 + i * 0.2}s ease-out both`,
+              }}
+            >{emoji}</span>
+          ))}
+        </div>
         <div className="relative mx-auto max-w-4xl px-4 pb-16 pt-20 sm:pb-20 sm:pt-28 lg:pt-32">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/15 bg-accent-soft px-4 py-1.5 text-sm font-medium text-accent">
@@ -39,18 +67,26 @@ export default function Page() {
             <p className="text-sm text-muted">Search 85+ free online tools</p>
           </div>
 
-          {/* Category links — real text for SEO */}
+          {/* Category links — per-category colors + real text for SEO */}
           <div className="flex flex-wrap items-center justify-center gap-2 pb-10 border-b border-card-border">
             <span className="text-sm font-semibold text-muted">Categories:</span>
-            {categories.filter((c) => c.id !== "all").map((cat) => (
-              <Link
-                key={cat.id}
-                href={`/category/${cat.id}`}
-                className="rounded-lg border border-accent/10 bg-accent/5 px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent/10 hover:border-accent/20 transition-colors"
-              >
-                {cat.name}
-              </Link>
-            ))}
+            {categories.filter((c) => c.id !== "all").map((cat) => {
+              const cc = CAT_COLORS[cat.id] || CAT_COLORS.encode
+              return (
+                <Link
+                  key={cat.id}
+                  href={`/category/${cat.id}`}
+                  className="rounded-lg border px-3 py-1.5 text-xs font-semibold transition-all hover:brightness-125 hover:scale-105"
+                  style={{
+                    borderColor: cc.border,
+                    backgroundColor: cc.bg,
+                    color: cc.text,
+                  }}
+                >
+                  {cat.name}
+                </Link>
+              )
+            })}
           </div>
 
           {/* All tools — real name/text links, ranked by priority */}
@@ -77,7 +113,7 @@ export default function Page() {
         <HomeContent />
       </Suspense>
 
-      <section className="border-t border-card-border">
+      <section className="border-t border-card-border bg-surface">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
           <div className="mb-6 flex items-center justify-between">
             <div>
@@ -120,7 +156,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="border-t border-card-border">
+      <section className="border-t border-card-border bg-surface">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-sm text-muted-soft">
             <span className="flex items-center gap-2">
