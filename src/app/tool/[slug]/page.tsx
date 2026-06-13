@@ -1,9 +1,16 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { tools } from "@/data/tools"
+import { tools, categories } from "@/data/tools"
+import { getGuideForTool } from "@/lib/cross-links"
+import { getToolH1 } from "@/lib/h1-map"
+import {
+  generateSoftwareApplicationSchema,
+  generateFAQPageSchema,
+  generateHowToSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/tool-schema"
 import { ToolRenderer } from "@/components/ToolRegistry"
 import { ToolReactions } from "@/components/ToolReactions"
-import { PwaInstallButton } from "@/components/PwaInstallButton"
 import { JsonLd } from "@/components/JsonLd"
 
 interface Props {
@@ -24,9 +31,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: tool.name,
     description: tool.description,
     openGraph: {
-      title: `${tool.name} — ToolNestX`,
+      title: `${tool.name} — LootNestX`,
       description: tool.description,
       url: `${baseUrl}/tool/${slug}`,
+      images: [{ url: `${baseUrl}/og/${slug}.png`, width: 1200, height: 630, alt: tool.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${tool.name} — LootNestX`,
+      description: tool.description,
+      images: [`${baseUrl}/og/${slug}.png`],
     },
     alternates: { canonical: `${baseUrl}/tool/${slug}` },
     manifest: `/api/manifest/${slug}`,
@@ -41,6 +55,7 @@ export default async function ToolPage({ params }: Props) {
   const { slug } = await params
   const tool = tools.find(t => t.slug === slug)
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://lootnestx-next.vercel.app"
+  const guide = getGuideForTool(slug)
 
   if (!tool) {
     return (
@@ -67,8 +82,7 @@ export default async function ToolPage({ params }: Props) {
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-3 flex-wrap">
           <span className="text-3xl">{tool.icon}</span>
-          <h1 className="text-2xl sm:text-3xl font-bold">{tool.name}</h1>
-          <PwaInstallButton />
+          <h1 className="text-2xl sm:text-3xl font-bold">{getToolH1(slug, tool.name)}</h1>
         </div>
         <p className="text-muted max-w-2xl">{tool.description}</p>
       </div>
@@ -154,17 +168,62 @@ export default async function ToolPage({ params }: Props) {
         )}
       </div>
 
-      {/* JSON-LD */}
-      <JsonLd data={{
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": tool.name,
-        "url": `${baseUrl}/tool/${tool.slug}`,
-        "description": tool.description,
-        "applicationCategory": "UtilityApplication",
-        "operatingSystem": "All",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      }} />
+      {/* Related Tools */}
+      <section className="mt-12 sm:mt-16 max-w-3xl">
+        <h2 className="text-lg font-semibold mb-4">You Might Also Like</h2>
+        {guide && (
+          <aside className="mb-6 p-5 rounded-xl border border-accent/20 bg-accent/5">
+            <p className="text-sm font-semibold text-accent mb-1">📖 Dive Deeper</p>
+            <Link href={guide.href} className="text-base font-semibold hover:underline">
+              {guide.title}
+            </Link>
+            <p className="text-sm text-muted mt-1">{guide.description}</p>
+          </aside>
+        )}
+        <div className="grid gap-3 sm:grid-cols-2">
+          {tools
+            .filter(t => t.slug !== tool.slug && t.category === tool.category && !t.comingSoon)
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 4)
+            .map(related => (
+              <Link
+                key={related.id}
+                href={`/tool/${related.slug}`}
+                className="group flex items-center gap-3 rounded-lg border border-card-border bg-card-bg p-3.5 hover:border-accent/20 transition-colors"
+              >
+                <span className="shrink-0 text-xl">{related.icon}</span>
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-medium text-foreground group-hover:text-accent transition-colors truncate">{related.name}</div>
+                  <div className="text-xs text-muted-soft truncate">{related.description}</div>
+                </div>
+              </Link>
+            ))}
+        </div>
+      </section>
+
+      {/* JSON-LD — SoftwareApplication + FAQPage + HowTo + BreadcrumbList */}
+      <JsonLd data={[
+        generateSoftwareApplicationSchema({
+          name: `${tool.name} — Free Online Tool | LootNestX`,
+          description: tool.description,
+          url: `${baseUrl}/tool/${tool.slug}`,
+          category: categories.find(c => c.id === tool.category)?.name || tool.category,
+          features: tool.useCases || tool.howTo?.slice(0, 6) || [tool.description.substring(0, 100)],
+        }),
+        generateFAQPageSchema(
+          tool.faq?.map(f => ({ question: f.q, answer: f.a }))
+        ),
+        generateHowToSchema(
+          `How to Use ${tool.name}`,
+          `Step-by-step guide to using the free ${tool.name} online tool.`,
+          tool.howTo?.map((step, i) => ({ position: i + 1, name: step.substring(0, 80), text: step })),
+          "PT2M"
+        ),
+        generateBreadcrumbSchema([
+          { name: "Home", url: baseUrl },
+          { name: tool.name, url: `${baseUrl}/tool/${tool.slug}` },
+        ]),
+      ]} />
     </div>
   )
 }

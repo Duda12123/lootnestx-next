@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { JsonLd } from "@/components/JsonLd"
+import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/tool-schema"
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://lootnestx.com"
 
 export const metadata: Metadata = {
   title: "How to Format and Validate JSON — Guide",
@@ -8,7 +12,21 @@ export const metadata: Metadata = {
 }
 
 export default function JsonFormatterGuide() {
+  const guideUrl = `${baseUrl}/guides/json-formatter-guide`
   return (
+    <>
+      <JsonLd data={[
+        generateArticleSchema({
+          headline: "How to Format and Validate JSON — A Developer's Guide",
+          description: "Master JSON formatting, validation, and debugging. Learn how to read nested JSON, spot common syntax errors, and format data for APIs, configs, and databases.",
+          url: guideUrl,
+        }),
+        generateBreadcrumbSchema([
+          { name: "Home", url: baseUrl },
+          { name: "Guides", url: `${baseUrl}/guides` },
+          { name: "JSON Formatter Guide", url: guideUrl },
+        ]),
+      ]} />
     <div className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
       <Link href="/guides" className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-8">
         <ArrowLeft size={16} /> Back to Guides
@@ -146,5 +164,6 @@ export default function JsonFormatterGuide() {
         </div>
       </article>
     </div>
+    </>
   )
 }

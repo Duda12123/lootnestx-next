@@ -3,8 +3,8 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Guides — ToolNestX",
-  description: "In-depth guides and tutorials to help you get the most out of ToolNestX's free online tools. Learn how to compress images, format JSON, encode data, and more.",
+  title: "Guides — LootNestX",
+  description: "In-depth guides and tutorials to help you get the most out of LootNestX's free online tools. Learn how to compress images, format JSON, encode data, and more.",
 }
 
 const guides = [
@@ -34,7 +34,7 @@ const guides = [
 export default function GuidesPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
-      <h1 className="text-3xl font-bold tracking-tight mb-2">Guides</h1>
+      <h1 className="text-3xl font-bold tracking-tight mb-2">Free Tool Guides & Tutorials — Learn to Use Online Tools Like a Pro</h1>
       <p className="text-muted mb-12">In-depth tutorials to help you get more from your tools.</p>
 
       <div className="space-y-6">

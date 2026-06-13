@@ -17,17 +17,17 @@ export interface Tool {
 }
 
 export const categories = [
-  { id: "all", name: "All Tools" },
-  { id: "encode", name: "Encode & Decode" },
-  { id: "formatters", name: "Formatters" },
-  { id: "generators", name: "Generators" },
-  { id: "css", name: "CSS Tools" },
-  { id: "image", name: "Image Tools" },
-  { id: "text", name: "Text Tools" },
-  { id: "audio", name: "Audio & Speech" },
-  { id: "dev", name: "Developer" },
-  { id: "utilities", name: "Everyday Utilities" },
-  { id: "fun", name: "Fun & Games" },
+  { id: "all", name: "All Tools", description: "", longDescription: "" },
+  { id: "encode", name: "Encode & Decode", description: "Convert data between formats instantly — Base64, URL encoding, HTML entities, and more.", longDescription: "Our free encode and decode tools let you convert data between formats instantly. Whether you need to Base64-encode a string for a data URI, URL-encode a query parameter, decode an HTML entity, or work with hex and binary representations, every tool runs entirely in your browser. No data is ever uploaded to a server — your strings, files, and secrets stay private." },
+  { id: "formatters", name: "Formatters", description: "Make messy data readable — JSON, XML, SQL, and code formatters with syntax highlighting.", longDescription: "Clean, format, and beautify messy data with our free formatter tools. Paste in minified JSON, compressed CSS, or tangled SQL and get back perfectly indented, syntax-highlighted output in milliseconds. Each formatter validates your input and highlights errors in real time, so you can fix issues as you go. Perfect for developers reviewing API responses, debugging config files, or documenting data structures." },
+  { id: "generators", name: "Generators", description: "Create passwords, UUIDs, lorem ipsum, QR codes, and more with one click.", longDescription: "Generate random passwords, cryptographically secure UUIDs, placeholder text, QR codes, hash values, and more — all with a single click. Our generators are built for speed and reliability. Each uses cryptographically secure randomness where appropriate (passwords, UUIDs) and lets you customize output length, character sets, and formatting. No page reloads, no server round-trips, just instant results." },
+  { id: "css", name: "CSS Tools", description: "Generate gradients, shadows, borders, flexbox layouts, and animations visually.", longDescription: "Design CSS visually without writing a single line of code. Generate box shadows with layered controls, build complex gradients with an intuitive editor, preview border-radius curves, debug flexbox layouts, and create CSS animations — then copy the production-ready code. Every tool shows a live preview, so you see exactly what you're building before copying." },
+  { id: "image", name: "Image Tools", description: "Compress, resize, crop, convert, and edit images — all processed locally in your browser.", longDescription: "Edit and optimize images without uploading them anywhere. Compress JPEGs and PNGs to reduce file size, resize images for social media or email, crop to exact dimensions, convert between WebP, AVIF, PNG, and JPEG formats, and extract color palettes from photos. Every tool processes your images locally using browser APIs — your photos never leave your device." },
+  { id: "text", name: "Text Tools", description: "Count words, diff text, sort lines, change case, find and replace — all in the browser.", longDescription: "Manipulate and analyze text without installing anything. Count characters and words with real-time stats, compare two texts with an inline diff viewer, sort lines alphabetically or by length, convert between case formats (UPPER, lower, Title, camelCase), find and replace with regex support, and more. Every tool updates as you type — copy the result in one click." },
+  { id: "audio", name: "Audio & Speech", description: "Convert text to speech, record audio, generate tones — everything processed locally.", longDescription: "Work with audio entirely in your browser. Convert text to natural-sounding speech for accessibility testing or content creation, record voice memos directly from your microphone, generate test tones and frequency sweeps, and more. All audio processing uses the Web Audio and Speech Synthesis APIs — nothing is uploaded to any server." },
+  { id: "dev", name: "Developer", description: "JWT debugger, regex tester, API request builder, and productivity tools for developers.", longDescription: "Essential developer utilities that run in your browser tab. Decode and inspect JWT tokens, test regular expressions against sample text with match highlighting, inspect HTTP status codes with explanations, format HTTP headers, and more. Each tool is designed to be fast and distraction-free — open the tool, paste your data, get results instantly." },
+  { id: "utilities", name: "Everyday Utilities", description: "Calculator, unit converter, BMI, sleep calculator, and everyday tools for everyone.", longDescription: "Practical tools for everyday life, all free and running in your browser. Use the scientific calculator for quick math, convert between metric and imperial units, calculate your BMI, figure out ideal sleep times, compute gas costs for road trips, and more. No app to install, no sign-up required — just open the tool and start using it." },
+  { id: "fun", name: "Fun & Games", description: "Random name pickers, dice rollers, color palette generators, and entertaining tools.", longDescription: "Lighthearted tools that make the web more fun. Roll virtual dice for game night, spin a random name picker for giveaways, generate beautiful color palettes from photos, create meme-style text, and more. All tools run instantly in your browser with no sign-ups or downloads — just pure browser-based fun." },
 ] as const
 
 export const tools: Tool[] = [
@@ -352,7 +352,7 @@ export const tools: Tool[] = [
     id: "json-formatter",
     name: "JSON Formatter",
     description: "Format, validate, minify, and visualize JSON as an interactive tree.",
-    longDescription: "Paste messy, minified, or broken JSON and instantly format it into clean, indented, readable code with syntax highlighting. Also validates your JSON, pinpoints syntax errors with line numbers, and offers an interactive tree view to explore deeply nested objects. Supports minification for production use. The most-used developer tool on ToolNestX — essential for API debugging, config file editing, and data inspection.",
+    longDescription: "Paste messy, minified, or broken JSON and instantly format it into clean, indented, readable code with syntax highlighting. Also validates your JSON, pinpoints syntax errors with line numbers, and offers an interactive tree view to explore deeply nested objects. Supports minification for production use. The most-used developer tool on LootNestX — essential for API debugging, config file editing, and data inspection.",
     category: "encode",
     icon: "📋",
     slug: "json-formatter",
@@ -1065,6 +1065,42 @@ export const tools: Tool[] = [
     icon: "🎬",
     slug: "subtitle-remover",
     comingSoon: true,
+  },
+  {
+    id: "story-generator",
+    name: "AI Story Generator",
+    description: "Generate creative story ideas, writing prompts, and plot premises across 8 genres.",
+    longDescription: "The ultimate cure for writer's block. Pick a genre \u2014 Fantasy, Sci-Fi, Mystery, Romance, Horror, Comedy, Adventure, or Drama \u2014 and instantly receive a fully-formed story premise with a unique title, protagonist, setting, inciting conflict, and tone direction. Each element can be regenerated individually or you can spin an entirely new story with one click. Perfect for authors brainstorming their next novel, game masters crafting campaign hooks, students working on creative writing assignments, or anyone who loves imagining 'what happens next.' The generated premises are designed to spark creativity, not replace it \u2014 use them as jumping-off points for your own storytelling. Also includes follow-up writing prompts to help you develop the first scene, define the antagonist, and shape the ending.",
+    category: "fun",
+    icon: "\uD83D\uDCD6",
+    slug: "story-generator",
+    featured: true,
+    useCases: ["Overcoming writer's block with fresh story premises", "Brainstorming novel plots and character arcs", "Creating campaign hooks for D&D and tabletop RPGs", "Generating creative writing prompts for workshops and classrooms"],
+    howTo: ["Select a genre from the toolbar \u2014 Fantasy, Sci-Fi, Mystery, Romance, Horror, Comedy, Adventure, or Drama \u2014 to focus on that category", "Click Generate New Story to create a full premise with title, character, setting, conflict, and tone", "Hover over any story element card and click the refresh button to regenerate just that part", "Copy the full story idea to your clipboard or use the writing prompt questions below for deeper development"],
+    faq: [
+      { q: "Are the stories generated by AI?", a: "The generator uses curated creative writing pools combined with randomization algorithms to produce unique story premises. It's designed to spark your creativity, not replace it \u2014 think of it as a creative partner that suggests directions you might not have considered." },
+      { q: "Can I use these story ideas commercially?", a: "Yes \u2014 the generated premises are royalty-free and can be used as inspiration for novels, screenplays, games, or any creative project. They're creative prompts, not copyrighted works." },
+      { q: "How many unique stories can it generate?", a: "With 10 characters, 10 settings, and 10 conflicts per genre across 8 genres \u2014 plus multiple tone options and title combinations \u2014 the generator can produce hundreds of thousands of unique premise combinations." }
+    ],
+    tips: ["Lock in a genre you love and regenerate the other elements for endless variations", "Use the writing prompt questions at the bottom to develop your character's motivation and the central conflict"],
+  },
+  {
+    id: "wwdc-bingo",
+    name: "WWDC 2026 Keynote Bingo",
+    description: "Generate a custom bingo card for Apple's WWDC 2026 keynote. Mark off announcements live!",
+    longDescription: "Make Apple's biggest event of the year even more fun with a custom WWDC keynote bingo card. Whether it's 'Tim Cook's Final Walkout,' 'Craig Federighi Hair Joke,' or 'Siri AI Rebuilt' — this interactive bingo generator gives you a unique 5×5 card every time. Play along during the June 9 keynote: mark off each announcement as it happens, watch for bingo lines, and share your card with friends. The center free space is automatically marked, and winning lines trigger confetti. All processing happens in your browser — no accounts, no uploads, just pure keynote-watching fun.",
+    category: "fun",
+    icon: "🎯",
+    slug: "wwdc-bingo",
+    featured: true,
+    useCases: ["Playing along during the WWDC 2026 keynote on June 9", "Generating unique bingo cards to share with friends and coworkers", "Making Apple event watching more interactive and social"],
+    howTo: ["Click New Card to generate a fresh 5×5 bingo card with randomized Apple keynote predictions", "Watch the WWDC keynote and click each cell when the corresponding announcement happens", "The center FREE SPACE is pre-marked — you only need 4 more in a row to bingo", "When you complete a full row, column, or diagonal, confetti fires and the winning line animates"],
+    faq: [
+      { q: "When is WWDC 2026?", a: "The WWDC 2026 keynote is scheduled for June 9, 2026 starting at 10:00 AM Pacific Time. The event is held at Apple Park in Cupertino, California." },
+      { q: "Can I use this bingo card for other Apple events?", a: "The predictions are tailored for WWDC 2026 specifically. The pool includes 45 items spanning software announcements, hardware reveals, and classic Apple keynote moments. Each card draws 24 unique items for a different experience every time." },
+      { q: "How does the win detection work?", a: "The bingo card checks all 12 possible winning lines: 5 rows, 5 columns, and 2 diagonals. When any line is fully marked, you'll see confetti and the winning cells animate. You can keep playing for multiple bingos on the same card." }
+    ],
+    tips: ["Share your card on Twitter with #WWDC26Bingo to play along with the community", "Use Clear Marks to reset for a second round — Apple events always have surprises"],
   },
 ]
 

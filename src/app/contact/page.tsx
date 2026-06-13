@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 
-export const metadata: Metadata = { title: "Contact — ToolNestX" }
+export const metadata: Metadata = { title: "Contact — LootNestX" }
 
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
-      <h1 className="text-3xl font-bold tracking-tight mb-4">Contact</h1>
+      <h1 className="text-3xl font-bold tracking-tight mb-4">Contact LootNestX — We&apos;d Love to Hear From You</h1>
       <p className="text-muted mb-8">Have a suggestion, found a bug, or want to request a tool? We&apos;d love to hear from you.</p>
       <div className="rounded-2xl border border-card-border bg-card-bg p-8 space-y-6">
         <div>

@@ -210,8 +210,8 @@ function ShareBox({ toolId, toolName }: { toolId: string; toolName?: string }) {
 
   const shareUrl = `${baseUrl}/tool/${toolId}`
   const shareText = toolName
-    ? `Check out "${toolName}" on ToolNestX — free online tool!`
-    : `Check out this free online tool on ToolNestX!`
+    ? `Check out "${toolName}" on LootNestX — free online tool!`
+    : `Check out this free online tool on LootNestX!`
   const encodedUrl = encodeURIComponent(shareUrl)
   const encodedText = encodeURIComponent(shareText)
 
@@ -236,7 +236,7 @@ function ShareBox({ toolId, toolName }: { toolId: string; toolName?: string }) {
   const handleNativeShare = useCallback(async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: toolName || "ToolNestX Tool", text: shareText, url: shareUrl })
+        await navigator.share({ title: toolName || "LootNestX Tool", text: shareText, url: shareUrl })
       } catch { /* user cancelled */ }
     }
   }, [shareUrl, shareText, toolName])

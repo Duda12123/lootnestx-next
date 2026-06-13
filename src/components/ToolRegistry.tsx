@@ -90,6 +90,8 @@ const toolMap: Record<string, React.ComponentType> = {
   "photo-effects": dynamic(() => import("@/tools/PhotoEffects")),
   "image-watermark": dynamic(() => import("@/tools/ImageWatermark")),
   "screen-recorder": dynamic(() => import("@/tools/ScreenRecorder")),
+  "story-generator": dynamic(() => import("@/tools/StoryGenerator")),
+  "wwdc-bingo": dynamic(() => import("@/tools/WwdcBingo")),
 }
 
 export function getToolComponent(slug: string): React.ComponentType | null {

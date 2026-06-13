@@ -1,0 +1,500 @@
+[
+  {
+    "slug": "calculator",
+    "name": "Scientific Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "timestamp",
+    "name": "Timestamp Converter",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "unit-converter",
+    "name": "Unit Converter",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "text-counter",
+    "name": "Text Counter",
+    "category": "text",
+    "tagline": ""
+  },
+  {
+    "slug": "countdown",
+    "name": "Countdown Timer",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "stopwatch",
+    "name": "Stopwatch",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "random-generator",
+    "name": "Random Number Generator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "percentage",
+    "name": "Percentage Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "date-calculator",
+    "name": "Date Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "emoji-picker",
+    "name": "Emoji Picker",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "tip-calculator",
+    "name": "Tip Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "discount-calculator",
+    "name": "Discount Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "bmi-calculator",
+    "name": "BMI Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "age-calculator",
+    "name": "Age Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "password-strength",
+    "name": "Password Strength Checker",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "world-clock",
+    "name": "World Clock",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "mortgage-calc",
+    "name": "Mortgage Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "gpa-calc",
+    "name": "GPA Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "gas-calc",
+    "name": "Gas Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "sales-tax",
+    "name": "Sales Tax Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "sleep-calc",
+    "name": "Sleep Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "cooking-converter",
+    "name": "Cooking Converter",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "sqft-calc",
+    "name": "Square Footage Calculator",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "currency-converter",
+    "name": "Currency Converter",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "pomodoro",
+    "name": "Pomodoro Timer",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "screen-recorder",
+    "name": "Screen Recorder",
+    "category": "utilities",
+    "tagline": ""
+  },
+  {
+    "slug": "html-entity",
+    "name": "HTML Entity Encoder",
+    "category": "encode",
+    "tagline": ""
+  },
+  {
+    "slug": "base64",
+    "name": "Base64 Encoder / Decoder",
+    "category": "encode",
+    "tagline": ""
+  },
+  {
+    "slug": "json-formatter",
+    "name": "JSON Formatter",
+    "category": "encode",
+    "tagline": ""
+  },
+  {
+    "slug": "url-encoder",
+    "name": "URL Encoder / Decoder",
+    "category": "encode",
+    "tagline": ""
+  },
+  {
+    "slug": "hash",
+    "name": "Hash Generator",
+    "category": "encode",
+    "tagline": ""
+  },
+  {
+    "slug": "sql-formatter",
+    "name": "SQL Formatter",
+    "category": "formatters",
+    "tagline": ""
+  },
+  {
+    "slug": "xml-formatter",
+    "name": "XML Formatter",
+    "category": "formatters",
+    "tagline": ""
+  },
+  {
+    "slug": "yaml-json",
+    "name": "YAML ↔ JSON Converter",
+    "category": "formatters",
+    "tagline": ""
+  },
+  {
+    "slug": "csv-json",
+    "name": "CSV ↔ JSON Converter",
+    "category": "formatters",
+    "tagline": ""
+  },
+  {
+    "slug": "image-compressor",
+    "name": "Image Compressor",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "image-converter",
+    "name": "Image Format Converter",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "image-cropper",
+    "name": "Image Cropper",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "image-resizer",
+    "name": "Image Resizer",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "image-to-base64",
+    "name": "Image to Base64",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "placeholder-image",
+    "name": "Placeholder Image",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "youtube-thumbnail",
+    "name": "YouTube Thumbnail Downloader",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "meme-generator",
+    "name": "Meme Generator",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "photo-effects",
+    "name": "Photo Effects & Filters",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "image-watermark",
+    "name": "Image Watermark Tool",
+    "category": "image",
+    "tagline": ""
+  },
+  {
+    "slug": "case-converter",
+    "name": "Case Converter",
+    "category": "text",
+    "tagline": ""
+  },
+  {
+    "slug": "list-tools",
+    "name": "List Tools",
+    "category": "text",
+    "tagline": ""
+  },
+  {
+    "slug": "text-diff",
+    "name": "Text Diff Checker",
+    "category": "text",
+    "tagline": ""
+  },
+  {
+    "slug": "slug-generator",
+    "name": "URL Slug Generator",
+    "category": "text",
+    "tagline": ""
+  },
+  {
+    "slug": "nato-alphabet",
+    "name": "NATO Phonetic Alphabet",
+    "category": "text",
+    "tagline": ""
+  },
+  {
+    "slug": "qrcode",
+    "name": "QR Code Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "password",
+    "name": "Password Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "color-palette",
+    "name": "Color Palette Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "markdown",
+    "name": "Markdown Preview",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "uuid-generator",
+    "name": "UUID Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "lorem-ipsum",
+    "name": "Lorem Ipsum Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "dice-roller",
+    "name": "Dice Roller",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "coin-flip",
+    "name": "Coin Flip",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "barcode",
+    "name": "Barcode Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "logo-generator",
+    "name": "Logo Generator",
+    "category": "generators",
+    "tagline": ""
+  },
+  {
+    "slug": "css-gradient",
+    "name": "CSS Gradient Generator",
+    "category": "css",
+    "tagline": ""
+  },
+  {
+    "slug": "css-shadow",
+    "name": "CSS Box Shadow Generator",
+    "category": "css",
+    "tagline": ""
+  },
+  {
+    "slug": "color-converter",
+    "name": "Color Converter",
+    "category": "css",
+    "tagline": ""
+  },
+  {
+    "slug": "color-picker",
+    "name": "Color Picker & Palette",
+    "category": "css",
+    "tagline": ""
+  },
+  {
+    "slug": "glassmorphism",
+    "name": "Glassmorphism CSS",
+    "category": "css",
+    "tagline": ""
+  },
+  {
+    "slug": "regex-tester",
+    "name": "Regex Tester",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "jwt-decoder",
+    "name": "JWT Decoder",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "cron-parser",
+    "name": "Cron Expression Parser",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "css-minifier",
+    "name": "CSS Minifier",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "html-formatter",
+    "name": "HTML Formatter",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "js-minifier",
+    "name": "JavaScript Minifier",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "json-diff",
+    "name": "JSON Diff",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "http-status",
+    "name": "HTTP Status Codes",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "ip-lookup",
+    "name": "What's My IP",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "screen-info",
+    "name": "Screen Info",
+    "category": "dev",
+    "tagline": ""
+  },
+  {
+    "slug": "tts",
+    "name": "Text to Speech",
+    "category": "audio",
+    "tagline": ""
+  },
+  {
+    "slug": "speech-to-text",
+    "name": "Speech to Text",
+    "category": "audio",
+    "tagline": ""
+  },
+  {
+    "slug": "what-to-eat",
+    "name": "What to Eat",
+    "category": "fun",
+    "tagline": ""
+  },
+  {
+    "slug": "random-joke",
+    "name": "Random Joke",
+    "category": "fun",
+    "tagline": ""
+  },
+  {
+    "slug": "truth-or-dare",
+    "name": "Truth or Dare",
+    "category": "fun",
+    "tagline": ""
+  },
+  {
+    "slug": "fortune-cookie",
+    "name": "Fortune Cookie",
+    "category": "fun",
+    "tagline": ""
+  },
+  {
+    "slug": "name-generator",
+    "name": "Name Generator",
+    "category": "fun",
+    "tagline": ""
+  },
+  {
+    "slug": "gaming-name-generator",
+    "name": "Gaming Name Generator",
+    "category": "fun",
+    "tagline": ""
+  }
+]

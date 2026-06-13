@@ -3,8 +3,10 @@ import { useState, useMemo } from "react"
 import QRCode from "qrcode"
 import { Download } from "lucide-react"
 
+const DEFAULT_URL = typeof window !== "undefined" ? `https://${window.location.hostname}` : ""
+
 export default function QrCodeGenerator() {
-  const [text, setText] = useState("https://lootnestx.com")
+  const [text, setText] = useState(DEFAULT_URL)
   const [size, setSize] = useState(300)
   const [fgColor, setFgColor] = useState("#ffffff")
   const [bgColor, setBgColor] = useState("#131317")

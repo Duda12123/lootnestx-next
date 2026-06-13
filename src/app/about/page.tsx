@@ -1,25 +1,25 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About — ToolNestX",
-  description: "Learn about ToolNestX — who we are, why we built this free online toolkit, and our mission to make useful tools accessible to everyone without sign-ups or paywalls.",
+  title: "About",
+  description: "Learn about LootNestX — who we are, why we built this free online toolkit, and our mission to make useful tools accessible to everyone without sign-ups or paywalls.",
 }
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
-      <h1 className="text-3xl font-bold tracking-tight mb-4">About ToolNestX</h1>
+      <h1 className="text-3xl font-bold tracking-tight mb-4">Our Mission: Free, Private Tools for Everyone</h1>
       <p className="text-muted mb-12 text-lg leading-relaxed">
         We believe useful tools shouldn&apos;t require accounts, downloads, or subscriptions.
-        Everything you need should work right in your browser — instantly, privately, and free.
+        Everything you need should work right in your browser - instantly, privately, and free.
       </p>
 
       <div className="prose prose-invert prose-zinc max-w-none space-y-6 text-muted leading-relaxed">
         <h2 className="text-xl font-semibold text-foreground">Who We Are</h2>
         <p>
-          ToolNestX is an independent project built by a small team of developers who got tired
+          LootNestX is an independent project built by a small team of developers who got tired
           of searching for simple online tools only to find ad-ridden pages, forced sign-ups,
-          and paywalled features. We wanted a clean, fast, private alternative — so we built one.
+          and paywalled features. We wanted a clean, fast, private alternative - so we built one.
         </p>
         <p>
           We&apos;re based in the United States and serve users worldwide. Every tool on this site
@@ -33,11 +33,11 @@ export default function AboutPage() {
           Instead, the web is full of tool sites that bombard you with popups, track your data,
           limit features behind paywalls, and upload your files to who-knows-where.
         </p>
-        <p>ToolNestX is different because:</p>
+        <p>LootNestX is different because:</p>
         <ul className="space-y-2">
           <li>
             <strong className="text-foreground">Everything runs locally.</strong>{" "}
-            Your data never leaves your device. Images, files, text — all processed right in your browser.
+            Your data never leaves your device. Images, files, text - all processed right in your browser.
           </li>
           <li>
             <strong className="text-foreground">No accounts. No sign-ups.</strong>{" "}
@@ -55,25 +55,25 @@ export default function AboutPage() {
 
         <h2 className="text-xl font-semibold text-foreground mt-10">What We Offer</h2>
         <p>
-          ToolNestX includes <strong>80+ free tools</strong> across 10 categories:
+          LootNestX includes <strong>80+ free tools</strong> across 10 categories:
         </p>
         <ul className="space-y-2">
-          <li><strong className="text-foreground">Calculators</strong> — BMI, mortgage, GPA, gas cost, sales tax, and more</li>
-          <li><strong className="text-foreground">Encoders & Decoders</strong> — Base64, URL encoding, HTML entities, hash generators</li>
-          <li><strong className="text-foreground">Formatters</strong> — JSON, SQL, XML, YAML, CSV with syntax highlighting</li>
-          <li><strong className="text-foreground">Image Tools</strong> — Compress, convert, crop, resize, watermark, and photo effects</li>
-          <li><strong className="text-foreground">Text Tools</strong> — Case converter, text diff, slug generator, NATO alphabet</li>
-          <li><strong className="text-foreground">Generators</strong> — Passwords, QR codes, UUIDs, barcodes, lorem ipsum</li>
-          <li><strong className="text-foreground">CSS Tools</strong> — Gradients, shadows, glassmorphism, color pickers</li>
-          <li><strong className="text-foreground">Developer Tools</strong> — Regex tester, JWT decoder, cron parser, minifiers</li>
-          <li><strong className="text-foreground">Audio Tools</strong> — Text-to-speech, speech-to-text</li>
-          <li><strong className="text-foreground">Fun & Games</strong> — Dice roller, coin flip, fortune cookie, name generators</li>
+          <li><strong className="text-foreground">Calculators</strong> - BMI, mortgage, GPA, gas cost, sales tax, and more</li>
+          <li><strong className="text-foreground">Encoders & Decoders</strong> - Base64, URL encoding, HTML entities, hash generators</li>
+          <li><strong className="text-foreground">Formatters</strong> - JSON, SQL, XML, YAML, CSV with syntax highlighting</li>
+          <li><strong className="text-foreground">Image Tools</strong> - Compress, convert, crop, resize, watermark, and photo effects</li>
+          <li><strong className="text-foreground">Text Tools</strong> - Case converter, text diff, slug generator, NATO alphabet</li>
+          <li><strong className="text-foreground">Generators</strong> - Passwords, QR codes, UUIDs, barcodes, lorem ipsum</li>
+          <li><strong className="text-foreground">CSS Tools</strong> - Gradients, shadows, glassmorphism, color pickers</li>
+          <li><strong className="text-foreground">Developer Tools</strong> - Regex tester, JWT decoder, cron parser, minifiers</li>
+          <li><strong className="text-foreground">Audio Tools</strong> - Text-to-speech, speech-to-text</li>
+          <li><strong className="text-foreground">Fun & Games</strong> - Dice roller, coin flip, fortune cookie, name generators</li>
         </ul>
 
         <h2 className="text-xl font-semibold text-foreground mt-10">Our Mission</h2>
         <p>
           Our mission is simple: make the web&apos;s most useful tools accessible to everyone,
-          instantly, with zero friction. No accounts, no paywalls, no tracking — just tools that work.
+          instantly, with zero friction. No accounts, no paywalls, no tracking - just tools that work.
         </p>
         <p>
           We believe that calculators, converters, formatters, and generators are basic utilities

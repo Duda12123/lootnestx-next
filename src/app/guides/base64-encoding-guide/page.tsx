@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { JsonLd } from "@/components/JsonLd"
+import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/tool-schema"
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://lootnestx.com"
 
 export const metadata: Metadata = {
   title: "Base64 Encoding Explained — Guide",
@@ -8,7 +12,21 @@ export const metadata: Metadata = {
 }
 
 export default function Base64Guide() {
+  const guideUrl = `${baseUrl}/guides/base64-encoding-guide`
   return (
+    <>
+      <JsonLd data={[
+        generateArticleSchema({
+          headline: "Base64 Encoding & Decoding — The Complete Guide",
+          description: "Learn what Base64 encoding is, how it works, and when to use it. Covers data URIs, API authentication, email attachments, and common use cases.",
+          url: guideUrl,
+        }),
+        generateBreadcrumbSchema([
+          { name: "Home", url: baseUrl },
+          { name: "Guides", url: `${baseUrl}/guides` },
+          { name: "Base64 Encoding Guide", url: guideUrl },
+        ]),
+      ]} />
     <div className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
       <Link href="/guides" className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-8">
         <ArrowLeft size={16} /> Back to Guides
@@ -16,7 +34,7 @@ export default function Base64Guide() {
 
       <article className="prose prose-invert prose-zinc max-w-none space-y-6 text-muted leading-relaxed">
         <h1 className="text-3xl font-bold tracking-tight text-foreground not-prose mb-4">
-          Base64 Encoding Explained — When and How to Use It
+          Base64 Encoding & Decoding — The Complete Guide
         </h1>
         <p className="text-sm text-muted-soft not-prose">June 2026 · 5 min read</p>
 
@@ -175,5 +193,6 @@ export default function Base64Guide() {
         </div>
       </article>
     </div>
+    </>
   )
 }
