@@ -92,6 +92,7 @@ const toolMap: Record<string, React.ComponentType> = {
   "screen-recorder": dynamic(() => import("@/tools/ScreenRecorder")),
   "story-generator": dynamic(() => import("@/tools/StoryGenerator")),
   "wwdc-bingo": dynamic(() => import("@/tools/WwdcBingo")),
+  "fathers-day-gift-matchmaker": dynamic(() => import("@/tools/FathersDayGiftMatchmaker")),
 }
 
 export function getToolComponent(slug: string): React.ComponentType | null {

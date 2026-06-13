@@ -1102,6 +1102,24 @@ export const tools: Tool[] = [
     ],
     tips: ["Share your card on Twitter with #WWDC26Bingo to play along with the community", "Use Clear Marks to reset for a second round — Apple events always have surprises"],
   },
+  {
+    id: "fathers-day-gift-matchmaker",
+    name: "Father's Day Gift Matchmaker",
+    description: "Take a fun 60-second quiz to find the perfect Father's Day 2026 gift matched to your dad's personality.",
+    longDescription: "Not sure what to get dad for Father's Day? Answer five quick questions about your dad's personality, budget, hobbies, and interests — and the Gift Matchmaker will serve up five personalized gift recommendations. The quiz considers over 35 curated gift ideas spanning DIY tools, tech gadgets, sports gear, grilling accessories, gaming accessories, outdoor gear, cooking equipment, and more — plus bonus World Cup 2026 picks if your dad is following the tournament. Every recommendation includes budget tags so you stay within your range. Share your dad's personality profile with family or take the quiz again for fresh ideas. All quiz processing happens in your browser — your answers are never uploaded or stored.",
+    category: "fun",
+    icon: "🎁",
+    slug: "fathers-day-gift-matchmaker",
+    featured: true,
+    useCases: ["Finding the perfect Father's Day gift when you're out of ideas", "Getting gift inspiration tailored to your dad's unique personality", "Sharing your dad's gift profile with siblings or family members", "Discovering trending 2026 gift ideas including World Cup merchandise"],
+    howTo: ["Answer 5 quick questions about your dad's personality, budget, and hobbies", "Click 'Reveal My Gifts' to see your personalized top 5 recommendations", "Browse the gift suggestions — each includes budget tags and category labels", "Share your results with family or restart the quiz for fresh ideas"],
+    faq: [
+      { q: "How does the Gift Matchmaker work?", a: "The quiz asks five questions about your dad's personality type, your budget, his hobby preferences, preferred gift style, and World Cup interest. Based on your answers, it scores and ranks over 35 curated gift ideas from a hand-picked database, delivering the best five matches." },
+      { q: "When is Father's Day 2026?", a: "Father's Day 2026 is on Sunday, June 21. The countdown timer on the tool page shows exactly how many days, hours, minutes, and seconds remain — so you don't miss it!" },
+      { q: "Are these real products I can buy?", a: "The gift ideas are curated recommendations based on trending products and popular gift categories for 2026. Use them as inspiration when shopping — exact pricing and availability will vary by retailer." }
+    ],
+    tips: ["Try different personality combos to explore gift ideas for multiple dads in your life", "Share your dad's profile with family members — it's a fun way to coordinate gifts"],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
