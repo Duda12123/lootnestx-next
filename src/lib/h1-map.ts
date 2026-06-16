@@ -114,6 +114,8 @@ export const toolH1Map: Record<string, string> = {
   "fortune-cookie": "Free Fortune Cookie — Get Your Daily Fortune Online",
   "password-strength": "Free Password Strength Checker — Test How Strong Your Password Is",
   "fathers-day-gift-matchmaker": "Free Father's Day Gift Matchmaker — Find the Perfect Gift for Dad in 60 Seconds",
+  "world-cup-watch-party-calculator": "Free World Cup Watch Party Cost Calculator — Plan Your 2026 FIFA Game Day Budget",
+  "world-cup-2026-bet-generator": "World Cup 2026 Bet Generator — Random Soccer Picks, Parlays & Lucky Numbers",
 }
 
 export const staticH1Map: Record<string, string> = {

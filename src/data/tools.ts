@@ -1120,6 +1120,55 @@ export const tools: Tool[] = [
     ],
     tips: ["Try different personality combos to explore gift ideas for multiple dads in your life", "Share your dad's profile with family members — it's a fun way to coordinate gifts"],
   },
+  {
+    id: "world-cup-watch-party-calculator",
+    name: "World Cup Watch Party Cost Calculator",
+    description: "Calculate your FIFA World Cup 2026 watch party budget — TVs, soundbars, grills, merch & more.",
+    longDescription: "Plan your FIFA World Cup 2026 watch party like a pro. Pick your crowd size (2-30 guests), choose a budget tier (Budget, Mid-Range, or Premium), and toggle the gear you need — big-screen TVs, soundbars, streaming devices, grills, coolers, outdoor projectors, stadium seating, soccer merch, food & drinks, party lights, face paint, and photo booths. Get an instant cost breakdown by category with personalized gear recommendations and a comparison showing how much you save vs. a premium setup. Perfect for soccer fans hosting game-day gatherings during the tournament.",
+    category: "fun",
+    icon: "⚽",
+    slug: "world-cup-watch-party-calculator",
+    featured: true,
+    useCases: [
+      "Budgeting your World Cup 2026 watch party gear and supplies",
+      "Comparing budget vs. premium party setups side by side",
+      "Planning group-viewing events with accurate per-person food costs",
+      "Getting personalized gear recommendations based on venue and crowd size"
+    ],
+    howTo: [
+      "Set your guest count, budget tier, and venue type (indoor, backyard, or both)",
+      "Toggle the gear you need — prices update automatically based on your budget tier",
+      "Click Calculate to see your total cost, category breakdown, and detailed item list",
+      "Browse gear reviews or recalculate with different settings to compare options"
+    ],
+    faq: [
+      { q: "How accurate are the gear prices?", a: "Prices are estimated ranges based on popular models as of June 2026. Actual prices may vary by retailer, location, and availability. Use the estimates for planning and budgeting — check current prices before purchasing." },
+      { q: "What if I already own some of the gear?", a: "Simply toggle off any items you already own. The calculator only adds up the items you have enabled, so you only see costs for what you actually need to buy." },
+      { q: "Does the food cost scale with guests?", a: "Yes — the Game Day Food & Drinks item is priced per person and automatically multiplies by your guest count. All other items are one-time purchases regardless of party size." }
+    ],
+    tips: [
+      "Toggle between budget tiers to see the price difference — mid-range often hits the sweet spot",
+      "If hosting outdoors, the projector and cooler auto-enable for a complete backyard setup"
+    ],
+  },
+  {
+    id: "world-cup-2026-bet-generator",
+    name: "World Cup 2026 Bet Generator",
+    description: "Generate random soccer bets across 6 play modes — match winners, scores, parlays, BTTS, and lucky numbers.",
+    longDescription: "Get ready for the biggest sporting event of 2026! The World Cup 2026 Bet Generator lets you randomize soccer bets across six play modes: Match Winner (Home/Draw/Away picks), Correct Score (exact score predictions), Over/Under (goal line picks), Parlay Builder (multi-leg accumulators with calculated odds), BTTS Picker (Both Teams to Score), and Lucky Numbers (lottery-style number generation). Choose between World Cup 2026 international teams (20 countries) or MLS club matchups (30 teams). Every pick comes with simulated betting odds. Build a 6-leg parlay and see the potential payout, generate lucky numbers for your office pool, or try BTTS predictions for multiple matches. All processing happens in your browser. For entertainment purposes only. Must be 21+.",
+    category: "fun",
+    icon: "⚽",
+    slug: "world-cup-2026-bet-generator",
+    featured: true,
+    useCases: ["Generating random soccer bets for entertainment during World Cup 2026", "Building sample parlays to understand how accumulator odds work", "Getting lottery-style number picks for office pools or fantasy drafts", "Exploring different bet types (moneyline, over/under, BTTS, correct score)"],
+    howTo: ["Choose between World Cup 2026 or MLS team pools", "Select a play mode from the 6 options", "Set the number of matches or parlay legs", "Click Generate to randomize picks — re-roll anytime for fresh results"],
+    faq: [
+      { q: "Is this tool for real betting?", a: "No — this is for entertainment purposes only. All picks are randomly generated and odds are simulated." },
+      { q: "What play modes are available?", a: "Six modes: Match Winner, Correct Score, Over/Under, Parlay Builder, BTTS Picker, and Lucky Numbers." },
+      { q: "Can I switch between World Cup and MLS teams?", a: "Yes — use the toggle to switch between World Cup 2026 international teams and MLS clubs." }
+    ],
+    tips: ["Try the Parlay Builder with 5–6 legs to see how odds multiply", "Use Lucky Numbers mode for World Cup office pools — pick 6 numbers from 1–49"],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
