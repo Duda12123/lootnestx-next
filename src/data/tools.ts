@@ -1122,33 +1122,33 @@ export const tools: Tool[] = [
   },
   {
     id: "world-cup-watch-party-calculator",
-    name: "World Cup Watch Party Cost Calculator",
-    description: "Calculate your FIFA World Cup 2026 watch party budget — TVs, soundbars, grills, merch & more.",
-    longDescription: "Plan your FIFA World Cup 2026 watch party like a pro. Pick your crowd size (2-30 guests), choose a budget tier (Budget, Mid-Range, or Premium), and toggle the gear you need — big-screen TVs, soundbars, streaming devices, grills, coolers, outdoor projectors, stadium seating, soccer merch, food & drinks, party lights, face paint, and photo booths. Get an instant cost breakdown by category with personalized gear recommendations and a comparison showing how much you save vs. a premium setup. Perfect for soccer fans hosting game-day gatherings during the tournament.",
+    name: "World Cup Watch Party Planner",
+    description: "Plan the ultimate 2026 FIFA World Cup watch party — TV size, food & drinks, and full budget in seconds.",
+    longDescription: "Plan the ultimate 2026 FIFA World Cup watch party with our free interactive planner. Tell us how many guests you're hosting, how long the party runs, what kind of room you're using, and your viewing distance — we'll instantly calculate the optimal TV size, recommend the right sound system and screen type, estimate how many pizzas, wings, chips, beers, sodas, and water bottles you need, and give you a complete budget breakdown covering food, drinks, gear, and decorations. Plus get curated gear recommendations from LootNestX editors. Perfect for soccer fans hosting game-day gatherings during the tournament in the USA, Mexico, and Canada.",
     category: "fun",
     icon: "⚽",
     slug: "world-cup-watch-party-calculator",
     featured: true,
     useCases: [
-      "Budgeting your World Cup 2026 watch party gear and supplies",
-      "Comparing budget vs. premium party setups side by side",
-      "Planning group-viewing events with accurate per-person food costs",
-      "Getting personalized gear recommendations based on venue and crowd size"
+      "Calculating the right TV size for your World Cup watch party room",
+      "Estimating food and drink quantities so you never run out during the match",
+      "Getting a full party budget breakdown before you shop",
+      "Sharing your party plan with guests so everyone knows what to expect"
     ],
     howTo: [
-      "Set your guest count, budget tier, and venue type (indoor, backyard, or both)",
-      "Toggle the gear you need — prices update automatically based on your budget tier",
-      "Click Calculate to see your total cost, category breakdown, and detailed item list",
-      "Browse gear reviews or recalculate with different settings to compare options"
+      "Enter your guest count, party duration, room type, and viewing distance",
+      "Click Calculate to instantly see your TV recommendation, food quantities, and budget",
+      "Review the screen & sound setup, food & drinks list, and total cost breakdown",
+      "Share your plan with friends or print the shopping list"
     ],
     faq: [
-      { q: "How accurate are the gear prices?", a: "Prices are estimated ranges based on popular models as of June 2026. Actual prices may vary by retailer, location, and availability. Use the estimates for planning and budgeting — check current prices before purchasing." },
-      { q: "What if I already own some of the gear?", a: "Simply toggle off any items you already own. The calculator only adds up the items you have enabled, so you only see costs for what you actually need to buy." },
-      { q: "Does the food cost scale with guests?", a: "Yes — the Game Day Food & Drinks item is priced per person and automatically multiplies by your guest count. All other items are one-time purchases regardless of party size." }
+      { q: "How is the recommended TV size calculated?", a: "We use the 4K viewing distance formula: multiply your viewing distance (in inches) by 0.625–0.835, then add a bonus for larger groups. For outdoor parties with 6+ guests, we recommend a projector setup instead." },
+      { q: "How accurate are the food quantity estimates?", a: "We estimate 3 pizza slices per person, 6 wings each, 1 bag of chips per 3 people, plus drinks scaled by party duration. These are generous estimates for a sports-watching crowd." },
+      { q: "Does this include actual TV and gear prices?", a: "The budget breakdown includes an estimated per-party gear cost (amortized) so you can plan your total spend. The gear recommendations section shows current prices for popular models reviewed by LootNestX." }
     ],
     tips: [
-      "Toggle between budget tiers to see the price difference — mid-range often hits the sweet spot",
-      "If hosting outdoors, the projector and cooler auto-enable for a complete backyard setup"
+      "Try different room types — backyard and basement setups get different gear recommendations",
+      "The food calculator scales with both guest count AND party duration, so longer events get more supplies"
     ],
   },
   {
@@ -1168,6 +1168,37 @@ export const tools: Tool[] = [
       { q: "Can I switch between World Cup and MLS teams?", a: "Yes — use the toggle to switch between World Cup 2026 international teams and MLS clubs." }
     ],
     tips: ["Try the Parlay Builder with 5–6 legs to see how odds multiply", "Use Lucky Numbers mode for World Cup office pools — pick 6 numbers from 1–49"],
+  },
+  {
+    id: "summer-gadget-showdown-2026",
+    name: "Summer 2026 Gadget Showdown",
+    description: "Battle the hottest summer 2026 gadgets head-to-head — compare scores on price, innovation, cool factor & practicality.",
+    longDescription: "Pit the hottest gadgets of Summer 2026 against each other in an interactive head-to-head showdown. Compare the Samsung Galaxy S26 Ultra, Galaxy Z Flip 7, Galaxy Z Fold 7, AI Chess Technology Board, Smart AI Voice Recorder, Aqara Smart Home Kit, Galaxy Earbuds 2026, Inflatable Paddle Board, Meta Threads, and Samsung R95H Micro RGB TV across five scoring dimensions: Price Value, Innovation, Cool Factor, Practicality, and Real-World Hype. Each gadget is scored by experts based on reviews and community feedback. See visual score bars, a detailed comparison table, and a winner announcement with reasoning. Make smarter buying decisions this summer without the marketing noise.",
+    category: "fun",
+    icon: "⚔️",
+    slug: "summer-gadget-showdown-2026",
+    featured: true,
+    useCases: [
+      "Comparing trending gadgets before making a purchase decision",
+      "Settling debates with friends about which new tech is actually better",
+      "Exploring Summer 2026's hottest products across phones, smart home, and outdoor gear",
+      "Getting an expert-scored breakdown of price value, innovation, and real-world practicality"
+    ],
+    howTo: [
+      "Select two gadgets from the dropdown menus on each side",
+      "Click the Battle! button to run the head-to-head comparison",
+      "Review the score bars and comparison table across all five metrics",
+      "See which gadget wins and why — switch challengers anytime to run new matchups"
+    ],
+    faq: [
+      { q: "How are the gadget scores determined?", a: "Scores are based on expert reviews, community feedback, and real-world testing across five dimensions: Price Value, Innovation, Cool Factor, Practicality, and Real-World Hype. Each is rated on a 1-10 scale." },
+      { q: "Can I compare any two gadgets?", a: "Yes — choose any two from the dropdown menus. The tool instantly calculates total scores and declares a winner based on the sum of all five metrics." },
+      { q: "Are the prices accurate?", a: "Prices reflect MSRP at launch and are approximate. Actual prices may vary by retailer, region, and promotions. Check current prices on LootNestX for the latest deals." }
+    ],
+    tips: [
+      "Compare gadgets in the same category (phones vs phones) for the most useful insights",
+      "The score bars update with smooth animations — hover over the table for exact numbers"
+    ],
   },
 ]
 
