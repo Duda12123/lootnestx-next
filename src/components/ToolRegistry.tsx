@@ -96,6 +96,8 @@ const toolMap: Record<string, React.ComponentType> = {
   "world-cup-watch-party-calculator": dynamic(() => import("@/tools/WorldCupWatchPartyCalculator")),
   "world-cup-2026-bet-generator": dynamic(() => import("@/tools/SoccerBetGenerator")),
   "summer-gadget-showdown-2026": dynamic(() => import("@/tools/SummerGadgetShowdown2026")),
+  "summer-gadget-deal-calculator": dynamic(() => import("@/tools/SummerGadgetDealCalculator")),
+  "summer-cooling-gadget-finder": dynamic(() => import("@/tools/SummerCoolingGadgetFinder")),
 }
 
 export function getToolComponent(slug: string): React.ComponentType | null {

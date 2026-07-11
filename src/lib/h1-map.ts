@@ -116,6 +116,8 @@ export const toolH1Map: Record<string, string> = {
   "fathers-day-gift-matchmaker": "Free Father's Day Gift Matchmaker — Find the Perfect Gift for Dad in 60 Seconds",
   "world-cup-watch-party-calculator": "Free World Cup Watch Party Cost Calculator — Plan Your 2026 FIFA Game Day Budget",
   "world-cup-2026-bet-generator": "World Cup 2026 Bet Generator — Random Soccer Picks, Parlays & Lucky Numbers",
+  "summer-cooling-gadget-finder": "Free Summer Cooling Gadget Finder 2026 — Beat the Heatwave Quiz",
+  "summer-gadget-deal-calculator": "Free Summer 2026 Gadget Deal Value Calculator — Find the Best Tech Bargains",
   "summer-gadget-showdown-2026": "Free Summer 2026 Gadget Showdown — Compare Trending Tech Head-to-Head",
 }
 

@@ -1200,6 +1200,72 @@ export const tools: Tool[] = [
       "The score bars update with smooth animations — hover over the table for exact numbers"
     ],
   },
+  {
+    id: "summer-gadget-deal-calculator",
+    name: "Summer 2026 Gadget Deal Value Calculator",
+    slug: "summer-gadget-deal-calculator",
+    longDescription: "The Summer 2026 Gadget Deal Value Calculator helps you find the best tech bargains across gaming gear, cooling devices, outdoor equipment, smart home products, and audio gadgets. Set your budget, pick categories, and get a ranked list of 24 trending products with a data-driven Deal Score that balances savings, product rating, trend hotness, and community trust. Compare deals side-by-side, see potential savings, and make smarter purchase decisions — all for free, with no sign-up required.",
+    description: "Calculate the true value of summer 2026 gadget deals. Compare gaming gear, cooling devices, outdoor tech, smart home & audio products. Find the best bang-for-buck with our interactive deal score algorithm.",
+    category: "shopping",
+    featured: true,
+    icon: "🏷️",
+    useCases: [
+      "Finding the best value among summer gadget deals across gaming, cooling, outdoor, smart home, and audio",
+      "Comparing 24 trending products with a data-driven Deal Score to see where your money goes farthest",
+      "Filtering deals by budget and minimum quality score to avoid impulse purchases",
+      "Getting a side-by-side comparison table with savings percentages and store availability"
+    ],
+    howTo: [
+      "Set your maximum budget using the slider or direct number input",
+      "Select one or more gadget categories — Gaming Gear, Cooling Tech, Outdoor, Smart Home, or Audio",
+      "Adjust the minimum Deal Score threshold to filter out weak deals",
+      "Click Find Best Deals to see ranked results with scores, savings, and comparison tables"
+    ],
+    faq: [
+      { q: "How is the Deal Score calculated?", a: "The score combines four factors: savings percentage (20 pts), product rating (50 pts), trend hotness (30 pts), and review volume bonus (10 pts). Scores are adjusted based on how the price fits your budget." },
+      { q: "Are these real-time prices?", a: "Prices are estimated based on current market trends as of July 2026. Always verify prices on the retailer's site before purchasing." },
+      { q: "Can I filter by specific stores?", a: "The tool shows products from Amazon, Best Buy, Steam, Apple, Walmart, REI, DJI, Meta, Microsoft, and others. Deals are sorted by value score rather than filtered by store." },
+      { q: "Why do some products have lower scores despite big discounts?", a: "Our algorithm balances savings against product quality (rating), popularity (hotness), and community trust (review volume). A 50% discount on a poorly-rated product scores lower than a 20% discount on a top-rated one." }
+    ],
+    tips: [
+      "Start with your real budget and then explore up or down to see what's available at different price tiers",
+      "Select all categories for a broad market scan, or narrow to one category for focused comparison",
+      "Lower the minimum score to 0 first to see everything available, then raise it to filter"
+    ],
+  },
+  {
+    id: "summer-cooling-gadget-finder",
+    name: "Summer Cooling Gadget Finder 2026",
+    slug: "summer-cooling-gadget-finder",
+    longDescription: "Beat the 2026 heatwave with our interactive cooling gadget quiz. Answer 4 quick questions about where you need cooling, your budget, what matters most (power, portability, quietness, eco-friendliness), and how long you need cooling per session. Get a personalized recommendation for the best portable AC, neck fan, cooling towel, pet cooling mat, or evaporative cooler — complete with pros, cons, specs, and trending products on TikTok and Amazon.",
+    description: "Beat the heat! Take our 4-question quiz to find the best portable AC, personal fan, cooling towel, or pet cooling mat for your needs. Compare prices, specs & trending products.",
+    category: "lifestyle",
+    featured: true,
+    icon: "🌬️",
+    useCases: [
+      "Finding the right cooling device for your home, office, outdoor activities, or pets during summer 2026 heatwaves",
+      "Comparing 5 types of cooling gadgets — portable AC, neck fan, cooling towel, pet mat, and evaporative cooler — based on your specific needs",
+      "Getting a personalized recommendation with pros, cons, specs, and trending TikTok/Amazon products",
+      "Discovering alternative cooling options when your top match isn't suitable"
+    ],
+    howTo: [
+      "Answer Question 1: Where do you need cooling — home, outdoor, office, or for pets?",
+      "Answer Question 2: What's your budget — under $30, $30–$80, or $80+?",
+      "Answer Question 3: What matters most — maximum power, portability, quiet operation, or eco-friendliness?",
+      "Answer Question 4: How long per session — quick bursts, 1–4 hours, or all day? Then get your perfect match!"
+    ],
+    faq: [
+      { q: "How does the quiz pick my cooling gadget?", a: "Our algorithm scores 5 product types against your 4 answers. Each answer adds weighted points. For example, choosing 'pet' gives +5 to Pet Cooling Mat, 'eco' gives +4 to Cooling Towel and +3 to Evaporative Cooler. The product with the highest total wins." },
+      { q: "Are these real products I can buy?", a: "The tool recommends product categories with trending brand names (JISULIFE, TORRAS, Mission, etc.). Prices are approximate market ranges. Check Amazon or the brand sites for current prices and availability." },
+      { q: "What if the recommended gadget doesn't fit my needs?", a: "Every result includes two alternative recommendations with different trade-offs. You can also retake the quiz with different answers to explore other options." },
+      { q: "Is a portable AC better than an evaporative cooler?", a: "It depends on your climate. Portable ACs work everywhere and cool more powerfully, but use more energy. Evaporative coolers are 80% more energy-efficient and work great in dry climates like the Southwest US, but are ineffective in humid regions like Florida or the Gulf Coast." }
+    ],
+    tips: [
+      "Be honest about your primary use case — a neck fan is perfect for commuting but won't cool a bedroom",
+      "If you live in a humid climate, skip evaporative coolers — they won't work well no matter how high they score",
+      "Pet owners: cooling mats are pressure-activated and need no electricity — perfect for travel crates and car rides"
+    ],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
